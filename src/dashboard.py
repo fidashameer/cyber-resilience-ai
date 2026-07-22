@@ -30,10 +30,7 @@ def load_and_run(use_llm: bool):
 
 
 st.title("AI-Driven Cyber Resilience — Behavioral Anomaly Detection + APT Attribution")
-st.caption(
-    "ET AI Hackathon 2026 · Problem Statement #7 · Scoped prototype: "
-    "Behavioral Anomaly Detection Engine + APT Campaign Attribution Agent"
-)
+st.caption("ET AI Hackathon 2026 · Problem Statement #7 · Solo build")
 
 with st.expander("Data & honesty notes — read before judging the numbers", expanded=False):
     st.markdown(
