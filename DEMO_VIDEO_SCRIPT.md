@@ -1,6 +1,6 @@
 # Demo Video Script — AI-Driven Cyber Resilience (Problem Statement #7)
 
-**Target length: 2:45–3:15.** Hackathon judges skim; a tight 3 minutes that's confident and specific beats a rambling 6 minutes.
+**Target length: 3:00–3:30.** Hackathon judges skim; a tight 3 minutes that's confident and specific beats a rambling 6 minutes. (Slightly longer than earlier drafts of this script — added a beat that states the technique-level attribution accuracy number explicitly, since it's the hackathon's own named evaluation criterion for this problem statement and shouldn't be left implicit.)
 
 ## Why you should record this yourself, not me
 
@@ -55,7 +55,12 @@ Action: show the recall-by-attack-type table or the slide-8/slide-9 charts from 
 
 > "I also found and partially fixed a real weakness during this build: stealthy lateral movement — an attacker quietly moving between machines — was almost invisible to the original engine. Adding a feature that tracks whether a computer reaches somewhere it's never gone before raised detection on that specific attack from 6% to 31%."
 
-### 6. Close (2:15–2:45)
+### 5b. Attribution accuracy — say this explicitly, it's the named judging criterion (2:15–2:35)
+Switch to deck slide 10, or the dashboard's attribution detail view.
+
+> "One more number I want to call out directly, because it's literally what this problem statement's own evaluation criteria name: attribution accuracy at the MITRE ATT&CK technique level. I measured it — 96.2% top-1, 98.8% top-3 — by checking whether the agent's top-ranked technique matches the exact technique ID my own attack simulators were built to model. That's a legitimate ground truth for data I generated myself, though I'm upfront that it doesn't carry over to the real UNSW-NB15 data, where no one labeled which technique each connection represents."
+
+### 6. Close (2:35–3:05)
 > "This is scoped to two of the five sub-agents the problem statement suggested, deliberately — a behavioral detection engine and an attack-attribution agent — because I'd rather show you two things that actually work end to end than five things half-built. The rest — automated response, vulnerability prioritization, a full digital twin — is documented as roadmap, not hidden. Full source, architecture diagram, and both benchmark results are in the repo. Thanks for watching."
 
 Show: closing deck slide (slide 12) or the GitHub repo page if it's live by then.
