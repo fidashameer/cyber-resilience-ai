@@ -8,3 +8,4 @@ __pycache__/
 # those terms yourself. The code that generates it (load_unsw_real.py) is
 # tracked; the output isn't. Regenerate locally with your own copy of the data.
 data/network_windows_real.csv
+DEMO_VIDEO_SCRIPT.md
