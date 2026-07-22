@@ -1,0 +1,10 @@
+{
+  "total_windows_scored": 7200,
+  "windows_flagged": 432,
+  "true_positive_alerts": 340,
+  "false_positive_alerts": 92,
+  "baseline_mttd_days_cited": 30,
+  "this_engine_mttd_minutes": 5,
+  "mttd_improvement_factor": 8640.0,
+  "llm_attribution_used": false
+}

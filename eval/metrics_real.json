@@ -1,0 +1,41 @@
+{
+  "dataset": "real UNSW-NB15 (see load_unsw_real.py for provenance/approximations)",
+  "n_windows": 6257,
+  "n_entities": 43,
+  "base_attack_rate": 0.1052,
+  "roc_auc": 0.8085,
+  "pr_auc": 0.2505,
+  "operating_point": {
+    "precision": 0.3116,
+    "recall": 0.3116,
+    "f1": 0.3116,
+    "false_positive_rate": 0.0809,
+    "flagged_count": 658
+  },
+  "recall_by_attack_type": {
+    "Analysis": {
+      "recall": 0.3333,
+      "n_windows": 3
+    },
+    "DoS": {
+      "recall": 1.0,
+      "n_windows": 2
+    },
+    "Exploits": {
+      "recall": 0.2919,
+      "n_windows": 394
+    },
+    "Fuzzers": {
+      "recall": 0.2486,
+      "n_windows": 173
+    },
+    "Generic": {
+      "recall": 0.5238,
+      "n_windows": 84
+    },
+    "Reconnaissance": {
+      "recall": 0.0,
+      "n_windows": 2
+    }
+  }
+}

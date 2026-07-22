@@ -1,0 +1,53 @@
+digraph architecture {
+	bgcolor=white fontname=Helvetica fontsize=11 rankdir=LR
+	node [fontname=Helvetica fontsize=10]
+	subgraph cluster_sources {
+		color=gray60 label="Data Sources" style=rounded
+		net [label="Network flow data
+(synthetic, CICIDS/UNSW-style
+feature schema)" shape=cylinder]
+		attck [label="MITRE ATT&CK KB
+(curated, 18 techniques)" shape=cylinder]
+	}
+	subgraph cluster_built {
+		color="#2b6cb0" label="Built (this prototype)" style=rounded
+		engine [label="Behavioral Anomaly
+Detection Engine
+(per-entity baseline +
+Isolation Forest + stat scorer)" color="#2b6cb0" fillcolor="#ebf4ff" shape=box style=filled]
+		orch [label="Orchestrator
+(flag -> attribute -> alert)" color="#2b6cb0" fillcolor="#ebf4ff" shape=box style=filled]
+		agent [label="APT Attribution Agent
+(retrieve top ATT&CK
+techniques, LLM narrative
+w/ rule-based fallback)" color="#2b6cb0" fillcolor="#ebf4ff" shape=box style=filled]
+		dash [label="Streamlit Dashboard
+(alert feed, entity drill-down,
+benchmark metrics, ATT&CK coverage)" color="#2b6cb0" fillcolor="#ebf4ff" shape=box style=filled]
+	}
+	subgraph cluster_roadmap {
+		color=gray50 label="Roadmap (not built — scope cut for solo/timeline)" style="rounded,dashed"
+		soar [label="Autonomous Incident
+Response Orchestrator (SOAR)" color=gray50 fontcolor=gray40 shape=box style=dashed]
+		vuln [label="Vulnerability
+Prioritization Agent" color=gray50 fontcolor=gray40 shape=box style=dashed]
+		twin [label="Cyber Resilience
+Digital Twin" color=gray50 fontcolor=gray40 shape=box style=dashed]
+		"graph" [label="Identity/Credential
+Graph AI (lateral movement)" color=gray50 fontcolor=gray40 shape=box style=dashed]
+	}
+	net -> engine
+	engine -> orch [label="anomaly score +
+contributing features"]
+	attck -> agent
+	orch -> agent [label="flagged windows"]
+	agent -> orch [label="narrative +
+recommended action"]
+	orch -> dash [label="structured alerts (JSON)"]
+	orch -> soar [label="high-confidence
+trigger" color=gray50 fontcolor=gray40 style=dashed]
+	engine -> "graph" [label="closes stealthy
+lateral-movement gap" color=gray50 fontcolor=gray40 style=dashed]
+	dash -> vuln [color=gray50 style=dashed]
+	dash -> twin [color=gray50 style=dashed]
+}

@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.streamlit/
+.DS_Store
+
+# Derived from the real UNSW-NB15 dataset, which has its own usage terms --
+# not republishing it (even aggregated) to a public repo without checking
+# those terms yourself. The code that generates it (load_unsw_real.py) is
+# tracked; the output isn't. Regenerate locally with your own copy of the data.
+data/network_windows_real.csv

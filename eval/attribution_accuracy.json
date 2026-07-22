@@ -1,0 +1,55 @@
+{
+  "tactic_level": {
+    "description": "proxy metric -- does top candidate's TACTIC match what's expected for the known attack type",
+    "top1_accuracy": 0.9735,
+    "top3_accuracy": 0.9941
+  },
+  "technique_level": {
+    "description": "does top candidate's exact TECHNIQUE ID match the technique our own simulator was written to model for that attack type (see EXPECTED_TECHNIQUE in this file) -- ground truth is our own design intent, valid for synthetic data only",
+    "top1_accuracy": 0.9618,
+    "top3_accuracy": 0.9882
+  },
+  "n_true_positive_alerts_evaluated": 340,
+  "by_attack_type": {
+    "port_scan": {
+      "n": 81,
+      "expected_technique": "T1595",
+      "tactic_top1_accuracy": 1.0,
+      "tactic_top3_accuracy": 1.0,
+      "technique_top1_accuracy": 1.0,
+      "technique_top3_accuracy": 1.0
+    },
+    "dos": {
+      "n": 74,
+      "expected_technique": "T1498",
+      "tactic_top1_accuracy": 0.9865,
+      "tactic_top3_accuracy": 1.0,
+      "technique_top1_accuracy": 0.973,
+      "technique_top3_accuracy": 1.0
+    },
+    "exfiltration": {
+      "n": 70,
+      "expected_technique": "T1041",
+      "tactic_top1_accuracy": 0.9571,
+      "tactic_top3_accuracy": 0.9714,
+      "technique_top1_accuracy": 0.9143,
+      "technique_top3_accuracy": 0.9714
+    },
+    "lateral_movement": {
+      "n": 59,
+      "expected_technique": "T1021",
+      "tactic_top1_accuracy": 0.9492,
+      "tactic_top3_accuracy": 1.0,
+      "technique_top1_accuracy": 0.9492,
+      "technique_top3_accuracy": 0.9661
+    },
+    "brute_force": {
+      "n": 56,
+      "expected_technique": "T1110",
+      "tactic_top1_accuracy": 0.9643,
+      "tactic_top3_accuracy": 1.0,
+      "technique_top1_accuracy": 0.9643,
+      "technique_top3_accuracy": 1.0
+    }
+  }
+}
